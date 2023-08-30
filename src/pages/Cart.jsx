@@ -33,6 +33,9 @@ const Cart = () => {
   }, [cartItems, dispatch]);
   return (
     <div className="mt-[30px]">
+      <p className="text-3xl mb-4 underline italic text-green-500">
+        SHOPPING CART
+      </p>
       {cartItems && cartItems.length > 0 ? (
         <div>
           {cartItems.map((item) => (
@@ -46,6 +49,7 @@ const Cart = () => {
                     <img
                       src={item.thumbnail}
                       alt={item.title}
+                      loading="lazy"
                       className="items-center text-center"
                     />
                   </Link>
@@ -109,13 +113,25 @@ const Cart = () => {
             >
               empty cart
             </button>
-            <button className="uppercase font-bold border-2 bg-green-500 p-2 rounded text-white">
+            <button
+              onClick={() => navigate('/check-out')}
+              className="uppercase font-bold border-2 bg-green-500 p-2 rounded text-white"
+            >
               checkout
             </button>
           </div>
         </div>
       ) : (
-        <p>Cart is empty ! Please add products</p>
+        <p>
+          Cart is empty !{' '}
+          <button
+            className="italic text-blue-700 font-bold hover:underline text-2xl"
+            onClick={() => navigate('/')}
+          >
+            CLICK ME
+          </button>{' '}
+          to add products
+        </p>
       )}
     </div>
   );
