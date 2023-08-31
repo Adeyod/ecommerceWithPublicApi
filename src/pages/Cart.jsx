@@ -84,7 +84,7 @@ const Cart = () => {
 
                 <p>
                   <span className="uppercase font-bold">
-                    Total:{' '}
+                    Total: $
                     {(
                       item.quantity *
                       (item.price -
@@ -98,15 +98,10 @@ const Cart = () => {
 
           <div className="mb-10">
             <p className="text-2xl">
-              <span className="uppercase font-bold">Sum Total:</span>{' '}
-              {/* {handleSumTotal} */}
+              <span className="uppercase font-bold">Sum Total:</span> $
+              <span className="uppercase font-bold">{cartTotalAmount}</span>
             </p>
 
-            <p>
-              <span className="uppercase font-bold">
-                Total: {cartTotalAmount}
-              </span>
-            </p>
             <button
               onClick={() => dispatch(emptyCart())}
               className="uppercase font-bold border-2 bg-red-500 p-2 rounded text-white"

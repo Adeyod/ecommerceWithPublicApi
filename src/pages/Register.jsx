@@ -75,8 +75,8 @@ const Register = () => {
                 required
               />
             </div>
-            <div className="flex gap-2 justify-center font-bold mt-2">
-              <p>Already have an account ?</p>
+            <div className="flex gap-2 font-bold mt-2">
+              <p className="text-justify">Already have an account ?</p>
               <Link className="text-blue-700 hover:underline" to="/login">
                 Login
               </Link>

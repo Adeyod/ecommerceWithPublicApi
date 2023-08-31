@@ -11,7 +11,9 @@ const Login = () => {
         <form className="">
           <div className=" justify-center p-5 gap-5">
             <div className="flex flex-col">
-              <label htmlFor="email">Email Address</label>
+              <label htmlFor="email" className="text-justify">
+                Email Address
+              </label>
               <input
                 className="border-2 w-full lg:w-[500px] rounded-lg pl-2 h-12 "
                 type="email"
@@ -22,7 +24,9 @@ const Login = () => {
               />
             </div>
             <div className="flex flex-col">
-              <label htmlFor="password">Password</label>
+              <label htmlFor="password" className="text-justify">
+                Password
+              </label>
               <input
                 className="border-2 w-full lg:w-[500px] rounded-lg pl-2 h-12 "
                 type="password"
@@ -33,8 +37,8 @@ const Login = () => {
               />
             </div>
 
-            <div className="flex gap-2 justify-center font-bold mt-2">
-              <p>Don't have an account ?</p>
+            <div className="flex gap-2 font-bold mt-2">
+              <p className="text-justify">Don't have an account ?</p>
               <Link className="text-blue-700 hover:underline" to="/register">
                 Register
               </Link>

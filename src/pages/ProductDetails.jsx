@@ -27,7 +27,9 @@ const ProductDetails = () => {
 
   return (
     <div className="m-10 gap-x-8">
-      <p>ProductDetails</p>
+      <p className="text-3xl mb-4 underline italic text-green-500">
+        ProductDetails
+      </p>
       <div className="lg:flex items-center justify-between">
         <div className="lg:mr-[80px] ">
           <img
@@ -38,9 +40,20 @@ const ProductDetails = () => {
           />
         </div>
         <div className="mt-5 lg:mx-[26px] lg:w-[50%] text-2xl ">
-          <p className="mb-12">{product?.description}</p>
-          <p>Name: {product?.title}</p>
-          <p>Price: ${product?.price}</p>
+          <p className="mb-12">
+            <span className="uppercase font-bold italic underline">
+              description:
+            </span>{' '}
+            {product?.description}
+          </p>
+          <p className="">
+            <span className="uppercase font-bold italic underline">name:</span>{' '}
+            {product?.title}
+          </p>
+          <p className="my-3">
+            <span className="uppercase font-bold italic underline">price:</span>{' '}
+            ${product?.price}
+          </p>
           <button
             className="uppercase bg-slate-600 p-2 rounded font-bold text-white mb-[40px]"
             onClick={() => handleAddToCart(product)}

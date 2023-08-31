@@ -28,14 +28,14 @@ const CheckOut = () => {
     dispatch(getTotal());
   }, [dispatch, cartItems]);
   return (
-    <div>
+    <div className=" overflow-x-hidden">
       <p className="uppercase font-bold border-2 md:w-[50%] mb-4 mx-auto bg-green-500 p-2 rounded text-white">
         CheckOut
       </p>
       <div>
         {cartItems && cartItems.length > 0 ? (
-          <div className="md:grid grid-cols-2 justify-between">
-            <div className="grid-cols-2">
+          <div className="lg:grid grid-cols-2 justify-between gap-x-16 ">
+            <div className="">
               <div className=" ">
                 <div className="grid grid-flow-col font-bold">
                   <p className="mr-20">Image</p>
@@ -54,6 +54,7 @@ const CheckOut = () => {
                           loading="lazy"
                         />
                         <p>
+                          $
                           {item.price -
                             (item.price * item.discountPercentage) / 100}
                         </p>
@@ -85,77 +86,88 @@ const CheckOut = () => {
               </div>
             </div>
 
-            <div className="flex flex-col md:items-end text-center ml-2 mt-5">
-              <p className="md:mr-[20%] lg:mr-[40%] font-bold border-2 p-2 rounded text-white bg-green-500">
+            <div className="max-w-[100%] flex flex-col lg:items-end text-center ml-2 mt-5">
+              <p className=" lg:mr-[30%] font-bold border-2 p-2 rounded text-white bg-green-500">
                 MAKE PAYMENT
               </p>
-              <form className="mx-auto">
-                <div className="">
-                  <p className="text-justify">Email</p>
-                  <input
-                    className="border-2 rounded pl-3 outline-none h-[40px] w-[410px] items-center"
-                    type="email"
-                    placeholder="Enter Email..."
-                  />
-                </div>
-
-                <div className="">
-                  <p className="text-justify">Card Information</p>
-                  <div className="flex justify-center">
+              <form className="">
+                <div className=" justify-center p-5 gap-5">
+                  <div className="flex flex-col">
+                    <p className="text-justify">Email</p>
                     <input
-                      className="border-2 rounded pl-3 h-[40px] outline-none w-[300px]"
-                      type="number"
-                      placeholder="1234 1234 1234 1234"
-                      maxLength={19}
-                    />
-                    <img
-                      className="h-[40px]"
-                      src="/images/visaRemoveBg.png"
-                      alt="cardImage"
+                      className="border-2 w-full lg:w-[500px] rounded-lg pl-2 h-12 "
+                      type="email"
+                      placeholder="Enter Email..."
                     />
                   </div>
-                  <div className="h-[40px] my-2">
-                    <input
-                      className="outline-none rounded pl-3 border-2 h-[40px] w-[205px] items-center"
-                      type="date"
-                      value="MM/YY"
-                    />
-                    <input
-                      className="border-2 rounded pl-3 h-[40px] outline-none w-[205px] items-center"
-                      type="number"
-                      placeholder="CVC"
-                      maxLength={3}
-                    />
-                  </div>
-                </div>
-
-                <div className="">
-                  <p className=" text-justify">Name on card</p>
-                  <input
-                    type="text"
-                    className="border-2 rounded pl-3 h-[40px] outline-none w-[410px] items-center"
-                  />
-                </div>
-                <div className="">
-                  <p className=" text-justify">Country or region</p>
 
                   <div className="flex flex-col">
-                    <select className="border-2 rounded pl-3 h-[40px] outline-none w-[410px] items-center">
-                      {data.map((info) => (
-                        <option value={info.name}>{info.name}</option>
-                      ))}
-                    </select>
+                    <p className="text-justify">Card Information</p>
+                    <div className="flex justify-center mb-2">
+                      <input
+                        // className="border-2 rounded pl-3 h-[40px] outline-none max-w-[100%] w-[300px]"
+                        className="border-2 w-full rounded-lg pl-2 h-12 "
+                        type="number"
+                        placeholder="1234 1234 1234 1234"
+                        maxLength={19}
+                      />
+                      <img
+                        className="h-[50px]"
+                        src="/images/visaRemoveBg.png"
+                        alt="cardImage"
+                      />
+                    </div>
+                    <div
+                      // className="h-[40px] my-2 max-w-[100%] flex items-center"
+                      className="flex"
+                    >
+                      <input
+                        className="border-2 w-full rounded-lg pl-2 h-12 "
+                        // className="outline-none rounded pl-3 border-2 h-[40px] w-[205px] items-center"
+                        type="date"
+                        value="MM/YY"
+                      />
+                      <input
+                        // className="border-2 rounded pl-3 h-[40px] outline-none w-[205px] items-center"
+                        className="border-2 w-full rounded-lg pl-2 h-12 "
+                        type="number"
+                        placeholder="CVC"
+                        maxLength={3}
+                      />
+                    </div>
+                  </div>
+
+                  <div className="">
+                    <p className=" text-justify">Name on card</p>
                     <input
-                      className="border-2 rounded pl-3 h-[40px] outline-none w-[410px] items-center"
-                      type="number"
-                      placeholder="ZIP"
+                      type="text"
+                      className="border-2 w-full lg:w-[500px] rounded-lg pl-2 h-12 "
                     />
                   </div>
-                </div>
-                <div className="mt-6 border-2 rounded pl-3 h-[40px] outline-none w-[410px] items-center flex">
-                  <input type="radio" />
-                  <div className="">
-                    <p>Save my info for secure 1-click checkout</p>
+                  {/* <div className=""> */}
+                  <p className=" text-justify">Country or region</p>
+
+                  {/* <div className="flex flex-col"> */}
+                  <select className="border-2 w-full lg:w-[500px] rounded-lg pl-2 h-12 ">
+                    {data.map((info) => (
+                      <option value={info.name}>{info.name}</option>
+                    ))}
+                  </select>
+                  <br />
+                  <input
+                    className="border-2 w-full lg:w-[500px] rounded-lg pl-2 h-12 my-3"
+                    type="number"
+                    placeholder="ZIP"
+                  />
+                  {/* </div> */}
+                  {/* </div> */}
+                  <div className="flex items-center border-2 w-full lg:w-[500px] rounded-lg md:pl-2 h-12 ">
+                    <input type="radio" />
+                    <div className="ml-[2px]">
+                      <p className="text whitespace-nowrap">
+                        Save info for secure 1-click checkout
+                      </p>
+                    </div>
                   </div>
                 </div>
               </form>

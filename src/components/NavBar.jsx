@@ -20,7 +20,7 @@ const NavBar = () => {
         <Link to="/">OnlineShoppers</Link>
       </div>
       <div className="flex justify-between items-center gap-4">
-        <div className=" hidden md:flex">
+        <div className=" hidden md:flex gap-x-3">
           <Link to="/login">Login</Link>
           <Link to="/register">Register</Link>
         </div>
