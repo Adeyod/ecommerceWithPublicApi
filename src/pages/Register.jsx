@@ -15,7 +15,7 @@ const Register = () => {
                 First Name
               </label>
               <input
-                className="border-2 w-full lg:w-[500px] rounded-lg pl-2 h-12"
+                className="border-2 outline-none w-full lg:w-[500px] rounded-lg pl-2 h-12"
                 type="text"
                 name="firstName"
                 id="firstName"
@@ -28,7 +28,7 @@ const Register = () => {
                 Last Name
               </label>
               <input
-                className="border-2 w-full lg:w-[500px] rounded-lg pl-2 h-12"
+                className="border-2 outline-none w-full lg:w-[500px] rounded-lg pl-2 h-12"
                 type="text"
                 name="lastName"
                 id="lastName"
@@ -41,7 +41,7 @@ const Register = () => {
                 Email Address
               </label>
               <input
-                className="border-2 w-full lg:w-[500px] rounded-lg pl-2 h-12 "
+                className="border-2 outline-none w-full lg:w-[500px] rounded-lg pl-2 h-12 "
                 type="email"
                 name="email"
                 id="email"
@@ -54,7 +54,7 @@ const Register = () => {
                 Password
               </label>
               <input
-                className="border-2 w-full lg:w-[500px] rounded-lg pl-2 h-12 "
+                className="border-2 outline-none w-full lg:w-[500px] rounded-lg pl-2 h-12 "
                 type="password"
                 name="password"
                 id="password"
@@ -67,7 +67,7 @@ const Register = () => {
                 Confirm Password
               </label>
               <input
-                className="border-2 w-full lg:w-[500px] rounded-lg pl-2 h-12 "
+                className="border-2 outline-none w-full lg:w-[500px] rounded-lg pl-2 h-12 "
                 type="password"
                 name="password2"
                 id="password2"

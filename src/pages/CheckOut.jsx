@@ -95,7 +95,7 @@ const CheckOut = () => {
                   <div className="flex flex-col">
                     <p className="text-justify">Email</p>
                     <input
-                      className="border-2 w-full lg:w-[500px] rounded-lg pl-2 h-12 "
+                      className="border-2 w-full lg:w-[500px] rounded-lg pl-2 h-12 outline-none"
                       type="email"
                       placeholder="Enter Email..."
                     />
@@ -105,8 +105,7 @@ const CheckOut = () => {
                     <p className="text-justify">Card Information</p>
                     <div className="flex justify-center mb-2">
                       <input
-                        // className="border-2 rounded pl-3 h-[40px] outline-none max-w-[100%] w-[300px]"
-                        className="border-2 w-full rounded-lg pl-2 h-12 "
+                        className="border-2 w-full rounded-lg pl-2 h-12 outline-none"
                         type="number"
                         placeholder="1234 1234 1234 1234"
                         maxLength={19}
@@ -117,19 +116,14 @@ const CheckOut = () => {
                         alt="cardImage"
                       />
                     </div>
-                    <div
-                      // className="h-[40px] my-2 max-w-[100%] flex items-center"
-                      className="flex"
-                    >
+                    <div className="flex">
                       <input
-                        className="border-2 w-full rounded-lg pl-2 h-12 "
-                        // className="outline-none rounded pl-3 border-2 h-[40px] w-[205px] items-center"
+                        className="border-2 w-full rounded-lg pl-2 h-12 outline-none"
                         type="date"
                         value="MM/YY"
                       />
                       <input
-                        // className="border-2 rounded pl-3 h-[40px] outline-none w-[205px] items-center"
-                        className="border-2 w-full rounded-lg pl-2 h-12 "
+                        className="border-2 w-full rounded-lg pl-2 h-12 outline-none"
                         type="number"
                         placeholder="CVC"
                         maxLength={3}
@@ -141,7 +135,7 @@ const CheckOut = () => {
                     <p className=" text-justify">Name on card</p>
                     <input
                       type="text"
-                      className="border-2 w-full lg:w-[500px] rounded-lg pl-2 h-12 "
+                      className="border-2 w-full lg:w-[500px] rounded-lg pl-2 h-12 outline-none"
                     />
                   </div>
                   {/* <div className=""> */}
@@ -155,13 +149,13 @@ const CheckOut = () => {
                   </select>
                   <br />
                   <input
-                    className="border-2 w-full lg:w-[500px] rounded-lg pl-2 h-12 my-3"
+                    className="border-2 w-full lg:w-[500px] rounded-lg pl-2 h-12 my-3 outline-none"
                     type="number"
                     placeholder="ZIP"
                   />
                   {/* </div> */}
                   {/* </div> */}
-                  <div className="flex items-center border-2 w-full lg:w-[500px] rounded-lg md:pl-2 h-12 ">
+                  <div className="flex pl-1 items-center border-2 w-full lg:w-[500px] rounded-lg md:pl-2 h-12 ">
                     <input type="radio" />
                     <div className="ml-[2px]">
                       <p className="text whitespace-nowrap">

@@ -15,7 +15,7 @@ const Login = () => {
                 Email Address
               </label>
               <input
-                className="border-2 w-full lg:w-[500px] rounded-lg pl-2 h-12 "
+                className="border-2 outline-none w-full lg:w-[500px] rounded-lg pl-2 h-12 "
                 type="email"
                 name="email"
                 id="email"
@@ -28,7 +28,7 @@ const Login = () => {
                 Password
               </label>
               <input
-                className="border-2 w-full lg:w-[500px] rounded-lg pl-2 h-12 "
+                className="border-2 outline-none w-full lg:w-[500px] rounded-lg pl-2 h-12 "
                 type="password"
                 name="password"
                 id="password"
