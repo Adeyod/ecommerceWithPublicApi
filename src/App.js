@@ -8,6 +8,7 @@ import Register from './pages/Register';
 import Footer from './components/Footer';
 import ProductDetails from './pages/ProductDetails';
 import CheckOut from './pages/CheckOut';
+import NotFound from './pages/NotFound';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Route path="/check-out" element={<CheckOut />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />
     </div>

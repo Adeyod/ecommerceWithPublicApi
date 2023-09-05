@@ -30,7 +30,7 @@ const Products = () => {
         onChange={(e) => setQuery(e.target.value)}
       />
       {productLists && productLists.length > 0 ? (
-        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 ml-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 ml-4">
           {productLists
             .filter((item) =>
               keys.some((key) => item[key].toLowerCase().includes(query))
